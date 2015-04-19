@@ -54,7 +54,9 @@ ggplot(data=averages, aes(x=interval, y=steps)) +
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+
 On average of all the days in the dataset, the 5 minute interval contains the maximum number of steps taken?
+
 
 ```r
 averages[which.max(averages$steps),]
@@ -94,6 +96,7 @@ fill.value <- function(steps, interval) {
 filled.data <- data
 filled.data$steps <- mapply(fill.value, filled.data$steps, filled.data$interval)
 ```
+
 Using the cleaned data set, a histogram of the total number of steps taken each day is generated and the mean and median total number of steps per day calculated.
 
 
